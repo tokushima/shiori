@@ -1,0 +1,10 @@
+{
+    "require": {
+        "tokushima/rhaco":"master-dev"
+    },
+    "autoload":{
+        "psr-0": {
+            "local": "lib/"
+        }
+    }
+}

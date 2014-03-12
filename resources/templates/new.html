@@ -1,0 +1,17 @@
+<rt:extends href="layout.html">
+
+<rt:block name="contents">
+<h1>URLの登録</h1>
+
+
+<rt:invalid />
+
+<form method='post' action='{$t.map_url('create')}'>
+  <div class='form-group'>
+    <input name='authenticity_token' value="<%= h session[:csrf] %>" type='hidden' />
+    <label for='url'>URL</label>
+    <input type='text' class='form-control' id='url' name='url' placeholder='Enter URL'>
+  </div>
+  <button type='submit' class='btn btn-default'>Submit</button>
+</form>
+</rt:block>
