@@ -1,5 +1,8 @@
 {
-    "require": {
-        "tokushima/rhaco":"master-dev"
-    }
-   }
+    "name": "tokushima/shiori",
+	"require": {
+		"php": ">=5.4.0",
+		 "tokushima/rhaco":"master-dev"
+	}
+}
+   
