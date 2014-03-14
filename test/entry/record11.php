@@ -7,7 +7,7 @@ for($i=0;$i<11;$i++){
 }
 \model\Bookmark::commit();
 
-$b = b();
+$b = new \chaco\Browser();
 $b->do_get(test_map_url('urls::index'));
 eq(200,$b->status());
 meq('class="pagination"',$b->body());

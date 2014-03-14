@@ -53,7 +53,7 @@ namespace brev{
 					(is_file($error_log) ? filesize($error_log) : 0),
 					$uri,
 			);
-			file_put_contents('php://stdout',implode("\t,",$data).PHP_EOL);
+			file_put_contents('php://stdout',implode("\t",$data).PHP_EOL);
 		}
 		static private function include_php($filename,$subdir){
 			if(isset($_SERVER['SERVER_NAME']) && isset($_SERVER['SERVER_PORT'])){
@@ -200,8 +200,35 @@ namespace brev{
 				if(is_file($f=dirname($file).'/__setup__.php')){
 					include($f);
 				}
-				$rtn = include(self::get_file($command));
+				foreach(self::get_params($command) as $k => $i){
+					$is_a = (substr($i[0],-2) == '[]');
+					$value = array();
+					$emsg = new \InvalidArgumentException('$'.$k.' must be an `'.$i[0].'`');
 					
+					foreach(\brev\Args::opts($k) as $v){
+						switch($is_a ? substr($i[0],0,-2) : $i[0]){
+							case 'string':
+								if(!is_string($v)) throw $emsg;
+								break;
+							case 'integer':
+								if(!ctype_digit($v)) throw $emsg;
+								$v = (int)$v;
+								break;
+							case 'float':
+								if(!is_numeric($v)) throw $emsg;
+								$v = (float)$v;
+								break;
+							case 'boolean':
+								if(!is_bool($v)) throw $emsg;
+								$v = (boolean)$v;
+								break;
+						}
+						$value[] = $v;
+					}
+					$$k = ($is_a ? $value : (empty($value) ? null : $value[0]));
+				}
+				$rtn = include(self::get_file($command));
+				
 				if(is_file($f=dirname($file).'/__teardown__.php')){
 					include($f);
 				}
@@ -226,14 +253,13 @@ namespace brev{
 				}
 			}
 		}
-		static public function doc($command){
+		static public function get_params($command){
 			$file = self::get_file($command);
 			$doc = (preg_match('/\/\*\*.+?\*\//s',file_get_contents($file),$m)) ?
 			trim(preg_replace("/^[\s]*\*[\s]{0,1}/m","",str_replace(array('/'.'**','*'.'/'),'',$m[0]))) :
 			'';
-				
+			
 			$help_params = array();
-			$pad = 4;
 			if(preg_match_all('/@.+/',$doc,$as)){
 				foreach($as[0] as $m){
 					if(preg_match("/@(\w+)\s+([^\s]+)\s+\\$(\w+)(.*)/",$m,$p)){
@@ -244,10 +270,29 @@ namespace brev{
 						$help_params[$p[2]] = array(null,trim($p[3]));
 					}
 				}
-				foreach(array_keys($help_params) as $k){
-					if($pad < strlen($k)){
-						$pad = strlen($k);
-					}
+			}
+			foreach($help_params as $k => $v){
+				if(substr($v[0],-2) == '[]'){
+					$v[0] = substr($v[0],0,-2);
+				}
+				switch($v[0]){
+					case 'string':
+					case 'integer':
+					case 'float':
+					case 'boolean':
+						break;
+					default:
+						throw new \InvalidArgumentException('$'.$k.': invalid type `'.$v[0].'`');
+				}
+			}
+			return $help_params;
+		}
+		static public function doc($command){		
+			$pad = 4;
+			$help_params = self::get_params($command);
+			foreach(array_keys($help_params) as $k){
+				if($pad < strlen($k)){
+					$pad = strlen($k);
 				}
 			}
 			print(PHP_EOL.'Usage:'.PHP_EOL);
