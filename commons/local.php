@@ -2,18 +2,18 @@
 date_default_timezone_set('Asia/Tokyo');
 
 
-\rhaco\Conf::set([
-	'rhaco.Dao'=>[
+\ebi\Conf::set([
+	'ebi.Dao'=>[
 		'connection'=>[
 			'*'=>['host'=>dirname(__DIR__),'dbname'=>'local.db'],
 		]
 	],
-	'rhaco.Log'=>[
+	'ebi.Log'=>[
 		'level'=>'warn',
-		'file'=>dirname(__DIR__).'/work/rhaco.log',
+		'file'=>dirname(__DIR__).'/work/ebi.log',
 		'stdout'=>true,
 	],
-	'rhaco.Flow'=>[
+	'ebi.Flow'=>[
 		'exception_log_level'=>'warn',
 //		'app_url'=>'http://localhost:8080',
 	]

@@ -1,4 +1,4 @@
-Shiori for rhaco
+Shiori for ebi
 ======
 
 
@@ -8,10 +8,13 @@ Shiori for rhaco
 ##Installation:
 
 	$ php composer.phar create-project tokushima/shiori ./shiori dev-master
-	$ php brev.php rhaco.Dt::create_table
+	$ ./vendor/bin/cmdman ebi.Dt::create_table
 
 
 ##Start the development server:
 
-	$ php -S localhost:8080 brev.php
+	$ php -S localhost:8080
 
+##Shiori
+
+	http://localhost:8080/urls.php

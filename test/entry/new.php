@@ -2,7 +2,7 @@
 /**
  * 新規作成
  */
-$b = new \chaco\Browser();
+$b = new \testman\Browser();
 
 //URLに不備がある場合はエラー表示が行われる
 $b->do_post(test_map_url('urls::create'));

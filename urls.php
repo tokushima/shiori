@@ -3,21 +3,21 @@ include_once('bootstrap.php');
 /**
  * @see https://github.com/sugamasao/Shiori
  */
-(new \rhaco\Flow())->execute([
+(new \ebi\Flow())->execute([
 	'error_template'=>'error.html',
 	'plugins'=>[
-		'\rhaco\flow\plugin\HtmlFilter',
-		'\rhaco\flow\plugin\TwitterBootstrap3Helper',
+		'\ebi\flow\plugin\HtmlFilter',
+		'\ebi\flow\plugin\TwitterBootstrap3Helper',
 	],
 	'patterns'=>[
 		''=>[
 			'name'=>'index',
 			'template'=>'index.html',
 			'action'=>function(){
-				$paginator = new \rhaco\Paginator(10);
+				$paginator = new \ebi\Paginator(10);
 				
 				return [
-					'bookmarks'=>\model\Bookmark::find_all(\rhaco\Q::order('id'),$paginator),
+					'bookmarks'=>\model\Bookmark::find_all(\ebi\Q::order('id'),$paginator),
 					'paginator'=>$paginator,
 				];
 			},
@@ -29,7 +29,7 @@ include_once('bootstrap.php');
 		'create'=>[
 			'name'=>'create',
 			'action'=>function(){
-				$req = new \rhaco\Request();
+				$req = new \ebi\Request();
 				
 				if($req->is_post()){
 					(new \model\Bookmark())->url($req->in_vars('url'))->save();
@@ -39,6 +39,6 @@ include_once('bootstrap.php');
 			'post_after'=>'index',
 			'error_template'=>'new.html',
 		],
-		'dt'=>['action'=>'rhaco.Dt'],
+		'dt'=>['action'=>'ebi.Dt'],
 	]
 ]);

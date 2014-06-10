@@ -7,13 +7,13 @@ for($i=0;$i<11;$i++){
 }
 \model\Bookmark::commit();
 
-$b = new \chaco\Browser();
+$b = new \testman\Browser();
 $b->do_get(test_map_url('urls::index'));
 eq(200,$b->status());
 meq('class="pagination"',$b->body());
 
 $i = 0;
-foreach($b->xml()->find_all('table/tbody/tr') as $tr){
+foreach($b->xml()->find('table/tbody/tr') as $tr){
 	eq('http://localhost/rspec_test',$tr->find_get('td/a')->in_attr('href'));
 	$i++;
 }
