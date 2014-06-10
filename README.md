@@ -24,5 +24,5 @@ $ php -S localhost:8080
 http://localhost:8080/urls.php
 ```
 
-!(snapshot.png)
+![](snapshot.png)
 
