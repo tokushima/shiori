@@ -3,7 +3,7 @@ include_once('bootstrap.php');
 /**
  * @see https://github.com/sugamasao/Shiori
  */
-(new \ebi\Flow())->execute([
+\ebi\Flow::app([
 	'error_template'=>'error.html',
 	'plugins'=>[
 		'\ebi\flow\plugin\HtmlFilter',
