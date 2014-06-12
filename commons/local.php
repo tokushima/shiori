@@ -16,6 +16,7 @@ date_default_timezone_set('Asia/Tokyo');
 	'ebi.Flow'=>[
 		'exception_log_level'=>'warn',
 //		'app_url'=>'http://localhost:8080',
+//		'rewrite_entry'=>true,
 	]
 ]);
 
