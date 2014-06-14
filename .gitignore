@@ -1,8 +1,11 @@
-/.settings
+/ settings
 /.buildpath
 /.project
 /local.db
 /work
 /composer.lock
-/vendor
 /composer.phar
+.git
+.DS_Store
+.settings*
+/vendor
