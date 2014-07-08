@@ -15,6 +15,11 @@ $ php composer.phar create-project tokushima/shiori ./shiori dev-master
 ```
 
 ```
+$ cd shiori
+```
+
+
+```
 $ curl -LO http://git.io/cmdman.phar
 $ php cmdman.phar ebi.Dt::setup
 ```
