@@ -2,9 +2,6 @@
     "name": "tokushima/shiori",
 	"require": {
 		"php": ">=5.4.0",
-		 "tokushima/ebi":"master-dev",
-		 "tokushima/testman":"master-dev",
-		 "tokushima/cmdman":"master-dev"
+		 "tokushima/ebi":"master-dev"
 	}
 }
-   

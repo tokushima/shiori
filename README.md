@@ -7,21 +7,41 @@ Shiori for ebi
 
 ##Installation:
 
+/Users/tokushima/Documents/workspace/
+
 ```
 $ curl -sS https://getcomposer.org/installer | php
 $ php composer.phar create-project tokushima/shiori ./shiori dev-master
-$ ./vendor/bin/cmdman ebi.Dt::create_table
 ```
+
+```
+$ curl -LO http://git.io/cmdman.phar
+$ php cmdman.phar ebi.Dt::setup
+```
+
+![](setup_result.png)
+
 
 ##Start the development server:
 
 ```
-$ php -S localhost:8080
+$ php -S localhost:8000
 ```
+
+
+##Test
+```
+$ curl -LO http://git.io/testman.phar
+$ php testman.phar
+```
+
+![](testman_result.png)
+
+
 
 ##Shiori
 ```
-http://localhost:8080/urls.php
+http://localhost:8000/urls.php
 ```
 
 ![](snapshot.png)

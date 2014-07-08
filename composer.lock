@@ -4,53 +4,20 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "7d7d4c58d4903075beb102dbacd79700",
+    "hash": "82a749a61bafbfa8ae2cf3934d2ea029",
     "packages": [
-        {
-            "name": "tokushima/cmdman",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/tokushima/cmdman.git",
-                "reference": "0986af65d6311ef53fd7e077682f832b135a9214"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/tokushima/cmdman/zipball/0986af65d6311ef53fd7e077682f832b135a9214",
-                "reference": "0986af65d6311ef53fd7e077682f832b135a9214",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0"
-            },
-            "bin": [
-                "bin/cmdman",
-                "bin/cmdman.router"
-            ],
-            "type": "library",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "tokushima"
-                }
-            ],
-            "time": "2014-06-17 14:03:31"
-        },
         {
             "name": "tokushima/ebi",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tokushima/ebi.git",
-                "reference": "46dc4bcaebf29e3743b24a95ca05a45f8fed7b77"
+                "reference": "d5169f68b12a7c99efabffd063953149167350c0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tokushima/ebi/zipball/46dc4bcaebf29e3743b24a95ca05a45f8fed7b77",
-                "reference": "46dc4bcaebf29e3743b24a95ca05a45f8fed7b77",
+                "url": "https://api.github.com/repos/tokushima/ebi/zipball/d5169f68b12a7c99efabffd063953149167350c0",
+                "reference": "d5169f68b12a7c99efabffd063953149167350c0",
                 "shasum": ""
             },
             "require": {
@@ -74,39 +41,7 @@
                     "name": "tokushima"
                 }
             ],
-            "time": "2014-06-16 03:54:19"
-        },
-        {
-            "name": "tokushima/testman",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/tokushima/testman.git",
-                "reference": "be82732e39643ad271a6d9a24d7f44b7aad299ef"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/tokushima/testman/zipball/be82732e39643ad271a6d9a24d7f44b7aad299ef",
-                "reference": "be82732e39643ad271a6d9a24d7f44b7aad299ef",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0"
-            },
-            "bin": [
-                "bin/testman"
-            ],
-            "type": "library",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "tokushima"
-                }
-            ],
-            "time": "2014-06-10 16:56:14"
+            "time": "2014-07-08 01:44:26"
         }
     ],
     "packages-dev": [
@@ -117,9 +52,7 @@
     ],
     "minimum-stability": "stable",
     "stability-flags": {
-        "tokushima/ebi": 20,
-        "tokushima/testman": 20,
-        "tokushima/cmdman": 20
+        "tokushima/ebi": 20
     },
     "platform": {
         "php": ">=5.4.0"
