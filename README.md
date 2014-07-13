@@ -11,10 +11,10 @@ Shiori for ebi
 
 ```
 $ curl -sS https://getcomposer.org/installer | php
-$ php composer.phar create-project tokushima/shiori ./shiori dev-master
 ```
 
 ```
+$ git clone https://github.com/tokushima/shiori.git shiori
 $ cd shiori
 ```
 

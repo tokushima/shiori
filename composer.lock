@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/tokushima/ebi.git",
-                "reference": "d5169f68b12a7c99efabffd063953149167350c0"
+                "reference": "64a79b00ef1e627f6dfa805ba7023c5cf906bf76"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tokushima/ebi/zipball/d5169f68b12a7c99efabffd063953149167350c0",
-                "reference": "d5169f68b12a7c99efabffd063953149167350c0",
+                "url": "https://api.github.com/repos/tokushima/ebi/zipball/64a79b00ef1e627f6dfa805ba7023c5cf906bf76",
+                "reference": "64a79b00ef1e627f6dfa805ba7023c5cf906bf76",
                 "shasum": ""
             },
             "require": {
@@ -41,7 +41,7 @@
                     "name": "tokushima"
                 }
             ],
-            "time": "2014-07-08 01:44:26"
+            "time": "2014-07-11 07:14:07"
         }
     ],
     "packages-dev": [
