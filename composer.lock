@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "82a749a61bafbfa8ae2cf3934d2ea029",
+    "hash": "502a51bc5d8968f77efe87c98d1cd5f5",
     "packages": [
         {
             "name": "tokushima/ebi",
@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/tokushima/ebi.git",
-                "reference": "64a79b00ef1e627f6dfa805ba7023c5cf906bf76"
+                "reference": "383684c7ecb0db4f0c8b7dea617e67ce2223fab7"
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/tokushima/ebi/zipball/64a79b00ef1e627f6dfa805ba7023c5cf906bf76",
-                "reference": "64a79b00ef1e627f6dfa805ba7023c5cf906bf76",
+                "reference": "383684c7ecb0db4f0c8b7dea617e67ce2223fab7",
                 "shasum": ""
             },
             "require": {
@@ -41,7 +41,7 @@
                     "name": "tokushima"
                 }
             ],
-            "time": "2014-07-11 07:14:07"
+            "time": "2014-07-24 16:22:41"
         }
     ],
     "packages-dev": [
@@ -54,6 +54,7 @@
     "stability-flags": {
         "tokushima/ebi": 20
     },
+    "prefer-stable": false,
     "platform": {
         "php": ">=5.4.0"
     },
