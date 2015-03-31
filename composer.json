@@ -1,7 +1,0 @@
-{
-    "name": "tokushima/shiori",
-	"require": {
-		"php": ">=5.4.0",
-		 "tokushima/ebi":"dev-master#383684c7ecb0db4f0c8b7dea617e67ce2223fab7"
-	}
-}

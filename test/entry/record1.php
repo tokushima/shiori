@@ -6,7 +6,7 @@
 \model\Bookmark::commit();
 
 $b = new \testman\Browser();
-$b->do_get(test_map_url('urls::index'));
+$b->do_get(url('index::index'));
 eq(200,$b->status());
 eq('http://localhost/rspec_test',$b->xml()->find_get('table/tbody/tr/td/a')->value());
 mneq('class="pagination"',$b->body());

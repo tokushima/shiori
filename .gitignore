@@ -8,3 +8,6 @@
 /cmdman.phar
 /testman.phar
 /__settings__.php
+/bootstrap.php
+/data.sqlite3
+/ebi.phar

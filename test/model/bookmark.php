@@ -1,19 +1,20 @@
 <?php
+
 try{
 	(new \model\Bookmark())->set_props(['url'=>''])->save();
-	failure('URLの値が空の場合は例外が発生する');	
-}catch(\ebi\Exceptions $e){
+	fail('URLの値が空の場合は例外が発生する');	
+}catch(\Exception $e){
 }
 
 try{
 	(new \model\Bookmark())->save();
-	failure('URLの値がnullの場合は例外が発生する');
+	fail('URLの値がnullの場合は例外が発生する');
 }catch(\ebi\Exceptions $e){
 }
 
 try{
 	(new \model\Bookmark())->set_props(['url'=>'example.com'])->save();
-	failure('URLの値がhttps等が存在しない場合は例外が発生する');
+	fail('URLの値がhttps等が存在しない場合は例外が発生する');
 }catch(\ebi\Exceptions $e){
 }
 
