@@ -3,7 +3,7 @@
 try{
 	(new \model\Bookmark())->set_props(['url'=>''])->save();
 	fail('URLの値が空の場合は例外が発生する');	
-}catch(\Exception $e){
+}catch(\ebi\Exceptions $e){
 }
 
 try{
