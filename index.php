@@ -1,12 +1,12 @@
 <?php
-include_once('bootstrap.php');
+include_once('ebi.phar');
 /**
  * @see https://github.com/sugamasao/Shiori
  */
 \ebi\Flow::app([
 	'error_template'=>'error.html',
 	'plugins'=>[
-		'\ebi\flow\plugin\HtmlFilter',
+ 		'\ebi\flow\plugin\HtmlFilter',
 		'\ebi\flow\plugin\TwitterBootstrap3Helper',
 	],
 	'patterns'=>[

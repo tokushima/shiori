@@ -1,2 +1,2 @@
 <?php
-include_once('/Users/tokushima/Documents/workspace/shiori/ebi.phar');
+include_once('ebi.phar');
