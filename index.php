@@ -6,8 +6,7 @@ include_once('ebi.phar');
 \ebi\Flow::app([
 	'error_template'=>'error.html',
 	'plugins'=>[
- 		'\ebi\flow\plugin\HtmlFilter',
-		'\ebi\flow\plugin\TwitterBootstrap3Helper',
+		'ebi.flow.plugin.HtmlFilter',
 	],
 	'patterns'=>[
 		''=>[
