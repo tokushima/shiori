@@ -1,5 +1,6 @@
 <?php
-include_once('ebi.phar');
+include('autoload.php');
+
 /**
  * @see https://github.com/sugamasao/Shiori
  */
@@ -16,7 +17,7 @@ include_once('ebi.phar');
 				$paginator = new \ebi\Paginator(10);
 				
 				return [
-					'bookmarks'=>\model\Bookmark::find_all(\ebi\Q::order('id'),$paginator),
+					'bookmarks'=>\myapp\model\Bookmark::find_all(\ebi\Q::order('id'),$paginator),
 					'paginator'=>$paginator,
 				];
 			},
@@ -27,13 +28,7 @@ include_once('ebi.phar');
 		],
 		'create'=>[
 			'name'=>'create',
-			'action'=>function(){
-				$req = new \ebi\Request();
-				
-				if($req->is_post()){
-					(new \model\Bookmark())->url($req->in_vars('url'))->save();
-				}
-			},
+			'action'=>'myapp.App::create',
 			'after'=>'new',
 			'post_after'=>'index',
 			'error_template'=>'new.html',

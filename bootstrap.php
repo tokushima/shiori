@@ -1,2 +1,2 @@
 <?php
-include_once('ebi.phar');
+include_once('vendor/autoload.php');

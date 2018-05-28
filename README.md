@@ -13,18 +13,7 @@ $ cd shiori
 ```
 
 ```
-$ curl -LO http://git.io/cmdman.phar
-$ curl -LO http://git.io/ebi.phar
-$ php cmdman.phar ebi.phar#ebi.Dt::setup
+$ php cmdman.phar ebi.Dt::dao_create_table
+$ php cmdman.phar ebi.Dt::setup
 ```
 
-## Start the development server:
-
-```
-$ php -S localhost:8000
-```
-
-## Shiori
-```
-http://localhost:8000
-```

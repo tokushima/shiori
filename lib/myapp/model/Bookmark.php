@@ -1,7 +1,7 @@
 <?php
-namespace model;
+namespace myapp\model;
 /**
- * @var string $url @['require'=>true]
+ * @var string $url @['require'=>true,'unique'=>true]
  */
 class Bookmark extends \ebi\Dao{
 	protected $id;
