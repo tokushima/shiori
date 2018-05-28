@@ -1,4 +1,4 @@
 <?php
 // DBのデータをテスト毎に空にしておく
-\model\Bookmark::find_delete();
-\model\Bookmark::commit();
+\myapp\model\Bookmark::find_delete();
+\myapp\model\Bookmark::commit();
